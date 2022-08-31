@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
+import Message from '../components/Message'
 import SubNavBar from '../components/SubNavBar'
+import { faker } from "@faker-js/faker";
+import OpenedMessage from '../components/OpenedMessage'
 
 function chats() {
     return (
@@ -16,10 +19,27 @@ function chats() {
           <Header selectedTab="work" />
     
           {/* Tasks */}
-          <div className='px-4 sm:px-6 md:px-8 lg:px-10 min-h-screen'>
-            <h1 className="text-3xl font-bold mt-11">Projects</h1>
+          <div className='px-4 sm:px-6 md:px-8 lg:px-10 min-h-[75vh] lg:min-h-[85vh]'>
+            <h1 className="text-3xl font-bold mt-11">Chats</h1>
             <SubNavBar selectedTab="chats" />
+            <div className="grid grid-cols-4 gap-4 mt-5">
+              <div className="bg-blue-50 py-5 px-3 rounded-lg hidden lg:block min-h-[70vh]">
+                <div className="flex justify-between items-center font-medium mb-3">
+                  <p>All Messages</p>
+                  <p className="text-xs">View all</p>
+                </div>
+                <div className="rounded-lg overflow-hidden">
+                  <Message sender="Beyond" senderImage={faker.image.avatar()} messageTime="8:32 pm" />
+                  <Message sender="Sameer" senderImage={faker.image.avatar()} messageTime="12:14 am" opened />
+                  <Message sender="Ahmed" senderImage={faker.image.avatar()} messageTime="6:03 pm" />
+                  <Message sender="Bashir" senderImage={faker.image.avatar()} messageTime="8:01 am" />
+                </div>
+              </div>
 
+              <div className="bg-blue-50 col-span-4 rounded-lg lg:col-span-3 py-5 px-3 min-h-[70vh]">
+                <OpenedMessage />
+              </div>
+            </div>
           </div>
           {/* Modal */}
         </div>

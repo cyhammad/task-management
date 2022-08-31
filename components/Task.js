@@ -5,6 +5,7 @@ import {
   ChatBubbleOvalLeftEllipsisIcon,
 } from "@heroicons/react/24/outline";
 import TaskModal from './TaskModal';
+import CommentsModal from './CommentsModal';
 
 function Task(props) {
   return (
@@ -18,16 +19,7 @@ function Task(props) {
       <div className="text-gray-400 pb-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quibusdam eos quos aut
       </div>
-      <div className={props.commentCount == undefined ? "hidden": "flex space-x-2 items-center cursor-pointer"}>
-          <div className=" rounded-md bg-white">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={faker.image.avatar()} alt="profile" className="h-4 cursor-pointer rounded-full" />
-          </div>
-          <p className="text-xs flex items-center text-gray-400 my-2">
-            {props.commentCount} comments
-            <ChatBubbleOvalLeftEllipsisIcon className="h-3 w-3 ml-1"/>
-          </p>
-        </div>
+      <CommentsModal commentCount={props.commentCount} profileImage={faker.image.avatar()} />
       <div className={props.taskNumber == undefined && props.remainingTime == undefined ? "hidden": "flex justify-between pb-4"}>
         <span className={props.taskNumber == undefined ? "opacity-0": "rounded-md bg-gray-700 text-white px-3 text-xs py-[4px] cursor-pointer"}>
           {props.taskNumber} task

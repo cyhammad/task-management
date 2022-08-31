@@ -2,10 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
 import SubNavBar from '../components/SubNavBar'
+import { faker } from "@faker-js/faker";
 import {
     MagnifyingGlassIcon,
     TrashIcon,
   } from "@heroicons/react/24/outline"
+import User from '../components/User'
 function users() {
     return (
         <div className="bg-default">
@@ -18,18 +20,21 @@ function users() {
           {/* Header */}
           <Header selectedTab="work" />
     
-          {/* Tasks */}
-          <div className='px-4 sm:px-6 md:px-8 lg:px-10 min-h-screen'>
-            <h1 className="text-3xl font-bold mt-11">Projects</h1>
+          {/* Users */}
+          <div className='px-4 sm:px-6 md:px-8 lg:px-10 min-h-['>
+            <h1 className="text-3xl font-bold mt-11">Users</h1>
             <SubNavBar selectedTab="users" />
-            <div className="mt-5 px-5 py-4 border border-gray-200 rounded-md flex">
+            <div className="mt-5 px-5 py-4 border border-gray-200 rounded-md flex mx-2">
                 <MagnifyingGlassIcon className="h-7 w-7 mr-3" />
                 <input type="text" className="bg-inherit w-full focus:outline-none" placeholder="Search user by email, username ..." />
             </div>
+            <User name="Beyond" email="beyond@gmail.com" phone="923336665554" status="active" profileImage={faker.image.avatar()} lastSeen="12 mins ago." />
+            <User name="Beyond" email="beyond@gmail.com" phone="923336665554" status="active" profileImage={faker.image.avatar()} lastSeen="12 mins ago." />
+            <User name="Beyond" email="beyond@gmail.com" phone="923336665554" status="active" profileImage={faker.image.avatar()} lastSeen="12 mins ago." />
+            <User name="Beyond" email="beyond@gmail.com" phone="923336665554" status="active" profileImage={faker.image.avatar()} lastSeen="12 mins ago." />
           </div>
           {/* Modal */}
         </div>
     )
 }
-
 export default users
