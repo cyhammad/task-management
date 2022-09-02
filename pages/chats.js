@@ -23,7 +23,7 @@ function chats() {
             <h1 className="text-3xl font-bold mt-11">Chats</h1>
             <SubNavBar selectedTab="chats" />
             <div className="grid grid-cols-4 gap-4 mt-5">
-              <div className="bg-blue-50 py-5 px-3 rounded-lg hidden lg:block min-h-[70vh]">
+              <div className="bg-[#F4F5F8] py-5 px-3 rounded-lg hidden lg:block min-h-[70vh]">
                 <div className="flex justify-between items-center font-medium mb-3">
                   <p>All Messages</p>
                   <p className="text-xs">View all</p>
@@ -36,7 +36,7 @@ function chats() {
                 </div>
               </div>
 
-              <div className="bg-blue-50 col-span-4 rounded-lg lg:col-span-3 py-5 px-3 min-h-[70vh]">
+              <div className="bg-[#F4F5F8] col-span-4 rounded-lg lg:col-span-3 py-5 px-3 min-h-[70vh]">
                 <OpenedMessage />
               </div>
             </div>

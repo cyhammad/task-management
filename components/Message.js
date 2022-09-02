@@ -3,7 +3,7 @@ import React from 'react'
 function Message(props) {
   return (
     <div>
-        <div className={props.opened == true ? "bg-slate-200 px-4 py-4 flex space-x-3 min-w-[240px]":"bg-white px-4 py-4 flex space-x-3 min-w-[240px]"}>
+        <div className={props.opened == true ? "bg-[#F3F3F3] px-4 py-4 flex space-x-3 min-w-[240px]":"bg-white px-4 py-4 flex space-x-3 min-w-[240px]"}>
         <div className=" rounded-md bg-white">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={props.senderImage} alt="profile" className="h-10 cursor-pointer rounded-full" />

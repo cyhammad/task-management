@@ -32,7 +32,7 @@ function AddCategoryModal(props) {
                     {/*body*/}
                     <div className="flex justify-center items-center pt-8">
                         <div className="bg-blue-50 p-8 flex justify-center items-center rounded-xl">
-                            <div className="bg-slate-700 flex justify-center items-center text-white px-2 py-2 rounded-lg">
+                            <div className="bg-[#004064] flex justify-center items-center text-white px-2 py-2 rounded-lg">
                                 <PlusIcon className='h-6 w-6' />
                             </div>
                         </div>
@@ -46,7 +46,7 @@ function AddCategoryModal(props) {
                     {/*footer*/}
                     <div className="flex flex-col justify-center items-center space-y-5 mt-10 mb-10 px-10">
                         <input type="text" name="categoryName" id="categoryName" className="rounded-md border-2 border-slate-500 text-slate-800 w-48 p-3 text-xs" placeholder="Category's Name" />
-                        <button className="bg-slate-800 rounded-md text-white w-48 py-3 text-xs" onClick={()=> setShowModal(false)}>
+                        <button className="bg-[#004064] rounded-md text-white w-48 py-3 text-xs" onClick={()=> setShowModal(false)}>
                             Add Category
                         </button>
                     </div>

@@ -25,7 +25,7 @@ function Header(props) {
               <div className="ml-10"></div>
               <div className={props.selectedTab == "work"? "nav-item nav-selected": "nav-item"}>
                 <div className="text-center">
-                  <Link href="/">
+                  <Link href="/homepage">
                     <a>
                       Work
                     </a>

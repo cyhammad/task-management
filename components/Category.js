@@ -9,7 +9,7 @@ function Category(props) {
   return (
     <div>
       <div className="bg-white px-4 py-2 flex space-x-3 rounded-lg min-w-[240px]">
-        <div className="bg-blue-500 p-1 rounded-lg text-white">
+        <div className="bg-[#228BE2] p-1 rounded-lg text-white">
             <GlobeAltIcon className="w-10 h-10" />
         </div>
         <div>

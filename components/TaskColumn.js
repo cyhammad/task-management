@@ -7,7 +7,7 @@ import {
 
 function TaskColumn(props) {
     return (
-        <div className="bg-gradient-to-b from-slate-100 to-slate-50 pt-7 w-fit mt-5 rounded-md">
+        <div className="bg-gradient-to-b from-[#F4F5F8] to-slate-50 pt-7 w-fit mt-5 rounded-md">
             <div className="flex justify-between items-center px-5 font-medium">
                 <h1 className="flex items-center">
                     {props.name}
