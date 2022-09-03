@@ -7,7 +7,7 @@ function SubNavBar(props) {
       <div className="h-8 mt-4 border-b-2 border-gray-100 flex justify-between lg:justify-start">
         <div className={props.selectedTab == "projects" ? "sub-nav-item sub-nav-selected": "sub-nav-item"}>
             <div className="text-center">
-                <Link href="/homepage">
+                <Link href="/">
                     <a>
                         Projects
                     </a>
